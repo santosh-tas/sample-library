@@ -58,7 +58,7 @@ class Controllers {
     }
     private getFileContent(fileName: string): Promise<any> {
         return new Promise((resolve, reject) => {
-            fs.readFile('bookDetails.json', (err: any, result: any) => {
+            fs.readFile(path.resolve(__dirname, 'bookDetails.json'), (err: any, result: any) => {
                 if (err) { reject(err) }
                 else resolve(result);
             })
@@ -67,7 +67,7 @@ class Controllers {
     private addNewContent(filename: string, bookDetails: {}) {
         return new Promise((resolve, reject) => {
 
-            fs.writeFile('bookDetails.json', JSON.stringify(bookDetails), (err: any) => {
+            fs.writeFile(path.resolve(__dirname, 'bookDetails.json'), JSON.stringify(bookDetails), (err: any) => {
                 if (err) { reject(err) }
                 else resolve({
                     data: "Added new Book Successfully"

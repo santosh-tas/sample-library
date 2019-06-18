@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = require("fs");
+const path = require("path");
 const fileName = 'bookDetails.json';
 class Controllers {
     constructor() {
@@ -61,7 +62,7 @@ class Controllers {
     }
     getFileContent(fileName) {
         return new Promise((resolve, reject) => {
-            fs.readFile('bookDetails.json', (err, result) => {
+            fs.readFile(path.resolve(__dirname, 'bookDetails.json'), (err, result) => {
                 if (err) {
                     reject(err);
                 }
@@ -72,7 +73,7 @@ class Controllers {
     }
     addNewContent(filename, bookDetails) {
         return new Promise((resolve, reject) => {
-            fs.writeFile('bookDetails.json', JSON.stringify(bookDetails), (err) => {
+            fs.writeFile(path.resolve(__dirname, 'bookDetails.json'), JSON.stringify(bookDetails), (err) => {
                 if (err) {
                     reject(err);
                 }
