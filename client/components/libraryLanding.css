@@ -1,0 +1,27 @@
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+    padding: 0 16px;
+  }
+  .action-button {
+    padding: 10px;
+    font-weight: bolder;
+    color: white;
+    background: #282c34;
+    border-radius: 10px;
+  }
+  .searchBar {
+      width: 35%;
+  }
+  input, textarea {
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.lib-landing {
+    display: flex;
+    flex-direction: column;
+}
