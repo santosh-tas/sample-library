@@ -14,7 +14,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 var config = {
   // we use ES2015; we will want source maps for development
-  devtool: 'eval-cheap-module-source-map',
+  // devtool: 'eval-cheap-module-source-map',
 
   entry: {
     bundle: ['./client/main.js']
