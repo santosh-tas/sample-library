@@ -19,8 +19,8 @@ const BaseLayout = () => (
             {/* <Route component={ErrorPage} /> */}
         </div>
         <footer className="footer">
-            <div className="footer__copyright">&copy; 2018 MTH</div>
-            <div className="footer__signature">Made with love by pure genius</div>
+            <div className="footer__copyright"></div>
+            <div className="footer__signature"></div>
         </footer>
     </div>
 )

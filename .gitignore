@@ -34,6 +34,8 @@ dist
 #Build files
 public/bundle.js
 public/styles.css
+dist/Public/bundle.js
+dist/Public/styles.css
 
 
 #stub

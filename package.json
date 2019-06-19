@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc && ./node_modules/.bin/webpack --config=webpack.config.js -p",
+    "copy": "cp bookDetails.json dist/controllers/bookDetails.json && cp -R src/views dist/views",
     "start": "node ./dist/app.js",
-    "dev": "npm run build && npm run start",
+    "dev": "npm run build && npm run copy && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Santosh Kumar Mohanty",
